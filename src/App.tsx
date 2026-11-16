@@ -5,6 +5,7 @@ import { ShopPage } from './pages/ShopPage';
 import { ProductDetailPage } from './pages/ProductDetailPage';
 import { CartPage } from './pages/CartPage';
 import { AdminDashboardPage } from './pages/AdminDashboardPage';
+import { ThemeStudioPage } from './pages/ThemeStudioPage';
 
 export default function App() {
   return (
@@ -17,6 +18,7 @@ export default function App() {
           <Route path="/product/:id" element={<ProductDetailPage />} />
           <Route path="/cart" element={<CartPage />} />
           <Route path="/admin" element={<AdminDashboardPage />} />
+          <Route path="/admin/theme-studio" element={<ThemeStudioPage />} />
         </Route>
       </Routes>
     </BrowserRouter>
