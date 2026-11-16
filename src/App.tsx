@@ -6,6 +6,9 @@ import { ProductDetailPage } from './pages/ProductDetailPage';
 import { CartPage } from './pages/CartPage';
 import { AdminDashboardPage } from './pages/AdminDashboardPage';
 import { ThemeStudioPage } from './pages/ThemeStudioPage';
+import { WebsiteBuilderPage } from './pages/WebsiteBuilderPage';
+import { ContentManagerPage } from './pages/ContentManagerPage';
+import { WebsiteSettingsPage } from './pages/WebsiteSettingsPage';
 
 export default function App() {
   return (
@@ -19,6 +22,9 @@ export default function App() {
           <Route path="/cart" element={<CartPage />} />
           <Route path="/admin" element={<AdminDashboardPage />} />
           <Route path="/admin/theme-studio" element={<ThemeStudioPage />} />
+          <Route path="/admin/website-builder" element={<WebsiteBuilderPage />} />
+          <Route path="/admin/content-manager" element={<ContentManagerPage />} />
+          <Route path="/admin/website-settings" element={<WebsiteSettingsPage />} />
         </Route>
       </Routes>
     </BrowserRouter>

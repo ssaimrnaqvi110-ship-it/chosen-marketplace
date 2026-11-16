@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { BarChart3, Boxes, FolderOpen, LayoutTemplate, Package, ShieldCheck, ShoppingBag, ShoppingCart, Users } from 'lucide-react';
 
 const adminCards = [
@@ -12,26 +13,34 @@ const adminCards = [
   { title: 'Cart Queue', value: '23 active', icon: ShoppingCart },
 ];
 
+const adminModules = [
+  { label: 'Dashboard', href: '/admin' },
+  { label: 'Theme Studio', href: '/admin/theme-studio' },
+  { label: 'Website Builder', href: '/admin/website-builder' },
+  { label: 'Product Manager', href: '/admin' },
+  { label: 'Category Manager', href: '/admin' },
+  { label: 'Order Manager', href: '/admin' },
+  { label: 'Customer Manager', href: '/admin' },
+  { label: 'Campaign Manager', href: '/admin' },
+  { label: 'Media Library', href: '/admin' },
+  { label: 'Content Manager', href: '/admin/content-manager' },
+  { label: 'Blog Manager', href: '/admin' },
+  { label: 'Seller Manager', href: '/admin' },
+  { label: 'Analytics & Reports', href: '/admin' },
+  { label: 'Website Settings', href: '/admin/website-settings' },
+  { label: 'User & Permissions', href: '/admin' },
+];
+
 export function AdminSidebar() {
   return (
     <aside className="admin-sidebar">
       <div className="admin-brand">CHOSEN Admin</div>
       <nav className="admin-nav">
-        <span>Dashboard</span>
-        <span>Theme Studio</span>
-        <span>Website Builder</span>
-        <span>Product Manager</span>
-        <span>Category Manager</span>
-        <span>Order Manager</span>
-        <span>Customer Manager</span>
-        <span>Campaign Manager</span>
-        <span>Media Library</span>
-        <span>Content Manager</span>
-        <span>Blog Manager</span>
-        <span>Seller Manager</span>
-        <span>Analytics & Reports</span>
-        <span>Website Settings</span>
-        <span>User & Permissions</span>
+        {adminModules.map(({ label, href }) => (
+          <Link key={label} to={href} className="admin-nav-item">
+            {label}
+          </Link>
+        ))}
       </nav>
       <div className="admin-cards">
         {adminCards.map(({ title, value, icon: Icon }) => (
